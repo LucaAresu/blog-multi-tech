@@ -1,0 +1,12 @@
+### Create Post
+POST {{hostName}}/post/
+Content-Type: application/json
+
+{
+  "author": "billy",
+  "content": "some random content"
+}
+
+
+### Get Posts
+GET {{hostName}}/post/

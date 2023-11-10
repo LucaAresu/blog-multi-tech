@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "rootDir": "./",
+    "sourceMap": true,
+    "paths": {
+      "@bootstrap*": ["./bootstrap*"],
+      "@routes*": ["./routes*"],
+      "@app*": ["./src*"]
+    }
+  },
+  "ts-node": {
+    "esm": true,
+    "compilerOptions": {
+      "module": "commonjs"
+    },
+    "require": ["tsconfig-paths/register"]
+  },
+  "include": [
+    ".eslintrc.cjs",
+    "routes/**/*.ts",
+    "src/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}

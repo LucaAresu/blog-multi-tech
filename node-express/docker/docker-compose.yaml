@@ -1,0 +1,18 @@
+version: '3.8'
+
+
+services:
+  mongo:
+    extends:
+      file: ../../build/docker-compose-extra.yaml
+      service: database_mongo
+  node:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ../:/opt/app:delegated
+    ports:
+     - "3000:3000"
+volumes:
+  db: {}
